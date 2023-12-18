@@ -26,4 +26,4 @@ jobs:
     - name: Start server
       run: |
         cd backend
-        python app.py
+        nohup python app.py &
