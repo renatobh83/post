@@ -25,6 +25,7 @@ jobs:
 
     - name: Start server
       run: |
+        export PORT=8000
         cd backend
         nohup python app.py &
     - name: Debug
