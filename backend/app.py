@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request
 from flask_cors import CORS
 from werkzeug.utils import url_quote  # Importe a função correta
