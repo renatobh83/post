@@ -1,4 +1,5 @@
 from flask import Flask, request
+from werkzeug.utils import url_quote  # Importe a função correta
 
 app = Flask(__name__)
 
