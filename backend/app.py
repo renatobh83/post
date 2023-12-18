@@ -9,7 +9,7 @@ def handle_post_request():
     # Faça algo com os dados do POST
     return {'message': 'POST recebido com sucesso'}
 @app.route('/api/', methods=['GET'])
-def handle_post_request():
+def handle_get_request():
     data = request.get_json()
     # Faça algo com os dados do POST
     return {'message': 'GET recebido com sucesso'}
