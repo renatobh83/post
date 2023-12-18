@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Estática</title>
+</head>
+<body>
+    <h1>Minha Página Estática</h1>
+    <button onclick="enviarSolicitacaoPost()">Enviar Solicitação POST</button>
+
+    <script>
+        async function enviarSolicitacaoPost() {
+            const resposta = await fetch('https://localhost:8000/api/endpoint', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ exemplo: 'dados' }),
+            });
+
+            const resultado = await resposta.json();
+            console.log(resultado);
+        }
+    </script>
+</body>
+</html>
