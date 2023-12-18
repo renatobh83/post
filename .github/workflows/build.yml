@@ -29,5 +29,4 @@ jobs:
         nohup python app.py &
     - name: Debug
       run: |
-        sleep 5  # Aguarde um tempo para o servidor iniciar
-        curl -X POST -H "Content-Type: application/json" -d '{"key": "value"}' http://localhost:5000/api/endpoint
+        cat backend/nohup.out
