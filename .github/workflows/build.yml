@@ -23,10 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r backend/requirements.txt
 
-    - name: Upgrade Werkzeug
-      run: |
-        pip install --upgrade werkzeug
-
     - name: Start server
       run: |
         cd backend
