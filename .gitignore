@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+/backend/__pycache__/
+/backend/*.pyc
+/backend/*.pyo
+/backend/*.pyd
+/docs/_site/
+/docs/.jekyll-cache/
+/docs/.jekyll-metadata
