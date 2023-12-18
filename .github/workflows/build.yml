@@ -27,3 +27,7 @@ jobs:
       run: |
         cd backend
         nohup python app.py &
+    - name: Debug
+      run: |
+        sleep 5  # Aguarde um tempo para o servidor iniciar
+        curl http://localhost:5000  # Substitua pela porta correta
