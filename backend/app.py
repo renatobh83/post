@@ -5,16 +5,15 @@ from werkzeug.utils import url_quote  # Importe a função correta
 
 app = Flask(__name__)
 
-@app.route('/api/endpoint', methods=['POST'])
-def handle_post_request():
-    data = request.get_json()
-    # Faça algo com os dados do POST
-    return {'message': 'POST recebido com sucesso'}
-@app.route('/api/', methods=['GET'])
-def handle_get_request():
-    data = request.get_json()
-    # Faça algo com os dados do POST
-    return {'message': 'GET recebido com sucesso'}
+@app.route('/api/endpoint', methods=['GET', 'POST'])
+def handle_request():
+    if request.method == 'GET':
+        # Lógica para lidar com solicitações GET
+        return {'message': 'GET recebido com sucesso'}
+    elif request.method == 'POST':
+        data = request.get_json()
+        # Lógica para lidar com solicitações POST
+        return {'message': 'POST recebido com sucesso'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
