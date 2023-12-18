@@ -4,7 +4,7 @@ from flask_cors import CORS
 from werkzeug.utils import url_quote  # Importe a função correta
 
 app = Flask(__name__)
-
+CORS(app)  
 @app.route('/api/endpoint', methods=['GET', 'POST'])
 def handle_request():
     if request.method == 'GET':
